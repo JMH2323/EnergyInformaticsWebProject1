@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Search Datasets</title>
+<link rel="stylesheet" href="Styles/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Search Datasets</h1>
+  </header>
+  <div class="line"></div>
+  <br>
+  <div>
+    <input type="text" id="searchInput" placeholder="Search for datasets..." onkeyup="searchDatasets()">
+  </div>
+  <br>
+  <ul id="searchResults"></ul>
+
+  <script>
+    // Dataset names and their associated HTML file paths (replace with your data)
+    const datasetDetails = [
+      { name: "Renewable Energy Share and GDP per Capita Dataset", link: "EnergyGDP.html" },
+      { name: "Renewable Energy Generation By U.S.A. States", link: "RenByState.html" },
+      { name: "Sustainable Africa Energy Analysis (SAS)", link: "SAS.html" },
+      // Add more dataset details (name and link) as needed
+    ];
+
+    function searchDatasets() {
+      const searchInput = document.getElementById('searchInput');
+      const searchQuery = searchInput.value.toLowerCase();
+      const searchResults = document.getElementById('searchResults');
+      searchResults.innerHTML = '';
+
+      const matchedDatasets = datasetDetails.filter(dataset =>
+        dataset.name.toLowerCase().includes(searchQuery)
+      );
+
+      if (matchedDatasets.length === 0) {
+        searchResults.innerHTML = '<li>No matching datasets found.</li>';
+      } else {
+        matchedDatasets.forEach(dataset => {
+          const li = document.createElement('li');
+          const link = document.createElement('a');
+          link.textContent = dataset.name;
+          link.href = dataset.link;
+          link.target = "_blank"; // Open link in a new tab
+          li.appendChild(link);
+          searchResults.appendChild(li);
+        });
+      }
+    }
+  </script>
+
+<div class="navigationbox">
+  <a href='home.html'>Return Home</a>
+  </div>
+
+  
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page Links with Descriptions</title>
+<link rel="stylesheet" href="Styles/styles.css">
+<style>
+  /* Additional styles for the page links */
+  .page-links {
+    margin: 50px auto;
+    width: 70%;
+  }
+  .page-content {
+    display: none; /* Initially hide content */
+    margin-bottom: 30px;
+  }
+  .page-link {
+    display: block;
+    text-decoration: underline;
+    font-size: 25px;
+    color: #0d43cd;
+  }
+  .page-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  .page-preview img {
+    width: 300px;
+    height: auto;
+    border: 1px solid #ccc;
+  }
+  .preview-button {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(226, 199, 22);
+  }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Affordable and Clean Energy Datasets</h1>        
+      </header>
+      <div class="line"></div>
+  <br>
+
+  
+  <!-- Page Links with Descriptions -->
+  <div class="page-links">
+    <div class="page">
+        <a href="EnergyGDP.html" class="page-link">Renewable Energy Share and GDP per Capita Dataset</a>
+      <a href="#" class="preview-button">Preview</a>
+      <div class="page-content">
+        <p class="page-description">This data describes the relationship between GDP and their Share of Renewable Energy generation</p>
+        <div class="page-preview">
+          <img src="images/RenewableShareWorld.jpeg" alt="Preview">
+        </div>
+      </div>
+    </div>
+    <!-- Add more page links with descriptions and previews as needed -->
+    <div class="page-links">
+        <div class="page">
+            <a href="SAS.html" class="page-link">Sustainable Africa Energy Analysis</a>
+          <a href="#" class="preview-button">Preview</a>
+          <div class="page-content">
+            <p class="page-description">This data describes This data describes the Clean Energy Access in the Sustainable Africa Scenario by looking at electricty access and its use in cooking.</p>
+            <div class="page-preview">
+              <img src="images/ElecAccessSAS.png" alt="Preview">
+            </div>
+          </div>
+        </div>
+
+    <div class="page-links">
+            <div class="page">
+                <a href="RenByState.html" class="page-link">Renewable Energy Generation By U.S.A. States</a>
+              <a href="#" class="preview-button">Preview</a>
+              <div class="page-content">
+                <p class="page-description">This Dataset shows the renewable energy output by each state in Gwh.</p>
+                <div class="page-preview">
+                  <img src="images/RenByState.jpg" alt="Preview">
+                </div>
+              </div>
+        </div>
+    
+        
+
+        
+  </div>
+
+  <script>
+    // JavaScript to toggle visibility of content on button click
+    document.querySelectorAll('.preview-button').forEach(button => {
+      button.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+      });
+    });
+  </script>
+
+<div class="navigationbox">
+  <a href='home.html'>Return Home</a>
+  </div>
+
+
+</body>
+</html>

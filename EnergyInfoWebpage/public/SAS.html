@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Affordable and Clean Energy Datasets</title>
+<link rel="stylesheet" href="Styles/styles.css">
+<style>
+  /* Additional styling for hiding/showing text */
+  .additional-info {
+    display: none;
+    margin-left: 10px; /* Adjust as needed */
+  }
+  .show-text {
+    display: block;
+  }
+  .content-container {
+    display: grid;
+    grid-template-columns: auto; /* Single column */
+    row-gap: 20px; /* Adjust as needed */
+  }
+  .image-text-container {
+    display: grid;
+    grid-template-columns: auto auto; /* Two columns for image and text */
+    column-gap: 20px; /* Adjust as needed */
+    justify-content: center; /* Center-align content initially */
+  }
+  img {
+    transition: margin-left 0.3s ease-in-out; /* Smooth transition for image movement */
+    max-width: 500px; /* Set maximum width for images */
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Affordable and Clean Energy Datasets</h1>
+  </header>
+  <div class="line"></div>
+  <br>
+  <div class="countryhead">Sustainable Africa Energy Analysis</div>
+  <br>
+
+  <div class="navigationbox">
+    <a href='home.html'>Return Home</a>
+  </div>
+
+
+  <!-- Script to toggle text display and shift images -->
+  <script>
+    function toggleText(imageId, textId) {
+      var info = document.getElementById(textId);
+      info.classList.toggle('show-text');
+    }
+  </script>
+
+  <div class="content-container">
+    <!-- First Image and Text -->
+    <div class="image-text-container">
+      <img id="ElecAccessSAS" src="images/ElecAccessSAS.png" onclick="toggleText('ElecAccessSAS', 'ElecAccessSAS-info')">
+      <div id="ElecAccessSAS-info" class="additional-info">
+        This Dataset shows the improvement in access to electricity and number of people gaining access by technology in sub-Saharan Africa in the SAS.
+      </div>
+    </div>
+
+    <!-- Second Image and Text -->
+    <div class="image-text-container">
+      <img id="CookAccessSAS" src="images/CookAccessSAS.png" onclick="toggleText('CookAccessSAS', 'CookAccessSAS-info')">
+      <div id="CookAccessSAS-info" class="additional-info">
+        This Dataset shows the population without access to modern energy services by region/country absent new access measures in Africa.
+      </div>
+    </div>
+
+    <!-- Third Image and Text -->
+    <div class="image-text-container">
+      <img id="GrowthAccessSAS" src="images/GrowthAccessSAS.png" onclick="toggleText('GrowthAccessSAS', 'GrowthAccessSAS-info')">
+      <div id="GrowthAccessSAS-info" class="additional-info">
+        This Dataset shows improvement in access to clean cooking and number of people gaining access by technology in sub-Saharan Africa and selected countries in the SAS.
+        Achieving universal access to clean cooking in Africa by 2030 necessitates a significant turnaround from the escalating trend of those without access observed between 2010 and 2019. Sub-Saharan Africa (SAS) is expected to witness approximately 130 million Africans, including 80 million from rural areas, gaining yearly access to clean cooking from 2022 to 2030, constituting around 10% of Africa's current population annually. Despite the progress seen in some countries between 2015 and 2019, even if Sub-Saharan Africa matched the fastest rates of improvement witnessed in other regions, it would still leave roughly 535 million people reliant on traditional biomass fuels by 2030.
+
+With varied methods, including improved biomass cook stoves, liquefied petroleum gas (LPG), electricity, biogas, and ethanol, the transition to clean cooking is taking place. 
+
+Expectations of meeting UN goals for universal access to clean cooking by 2030 in Africa are challenging due to the persisting gap between the current pace of progress and the ambitious targets set forth by the UN.
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>

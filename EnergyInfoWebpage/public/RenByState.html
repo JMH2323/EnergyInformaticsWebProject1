@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Affordable and Clean Energy Datasets</title>
+<link rel="stylesheet" href="Styles/styles.css">
+<style>
+  /* Additional styling for hiding/showing text */
+  .additional-info {
+    display: none;
+    margin-left: 10px; /* Adjust as needed */
+  }
+  .show-text {
+    display: block;
+  }
+  .content-container {
+    display: grid;
+    grid-template-columns: auto; /* Single column */
+    row-gap: 20px; /* Adjust as needed */
+  }
+  .image-text-container {
+    display: grid;
+    grid-template-columns: auto auto; /* Two columns for image and text */
+    column-gap: 20px; /* Adjust as needed */
+    justify-content: center; /* Center-align content initially */
+  }
+  img {
+    transition: margin-left 0.3s ease-in-out; /* Smooth transition for image movement */
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Affordable and Clean Energy Datasets</h1>
+  </header>
+  <div class="line"></div>
+  <br>
+  <div class="countryhead">Renewable Energy Generation by State</div>
+  <br>
+
+  <!-- Script to toggle text display and shift images -->
+  <script>
+    function toggleText(imageId, textId) {
+      var info = document.getElementById(textId);
+      info.classList.toggle('show-text');
+
+      var image = document.getElementById(imageId);
+      image.style.marginLeft = '20px'; /* Shift the image right */
+    }
+  </script>
+
+  <div class="content-container">
+    <!-- First Image and Text -->
+    <div class="image-text-container">
+      <img id="RenByState" src="images/RenByState.jpg" onclick="toggleText('WorldGDPperCapita', 'WorldGDPperCapita-info')">
+      <div id="RenByState-info" class="additional-info">
+        This Dataset shows the renewable energy output by each state in Gwh.
+        It also features a Heatmap to highlight which states are producing more of
+        what kind of energy. 
+      </div>
+    </div>
+
+    <div class="navigationbox">
+      <a href='home.html'>Return Home</a>
+      </div>
+
+</body>
+</html>

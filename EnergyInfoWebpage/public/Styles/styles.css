@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+
+	.line{
+		height:1px;
+		background-color:green;
+	}
+	
+		header{
+		color:green;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	
+		body{
+		background-color: cornsilk;
+		text-align: center;
+	}
+	
+	.countryhead{
+		color:green;
+		font-weight: bold;
+		text-align: center;
+		font-size: larger;
+	}
+	
+	
+	.navigationbox {
+		border: 2px solid green;
+		color: green;
+		width: 150px;
+		height: 5%;
+		position: fixed;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		bottom: 10px;
+		right: 10px; 
+	}
+
+	 
+	  .analysis-component h3 {
+		font-size: 20px; /* Adjust the font size as needed */
+		margin-bottom: 10px; /* Optional: Adjust margin between headings */
+	  }
+
+	  .content-container {
+		display: grid;
+		grid-template-columns: auto; /* Single column */
+		row-gap: 20px; /* Adjust as needed */
+	  }
+	  .image-text-container {
+		display: grid;
+		grid-template-columns: auto auto; /* Two columns for image and text */
+		column-gap: 20px; /* Adjust as needed */
+		justify-content: center; /* Center-align content initially */
+	  }
+	  img {
+		max-width: 600px; /* Ensure the image fits within its container */
+		height: auto;
+		transition: margin-left 0.3s ease-in-out; /* Smooth transition for image movement */
+	  }

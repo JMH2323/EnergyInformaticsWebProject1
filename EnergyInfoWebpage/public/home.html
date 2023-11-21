@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home - Clean and Affordable Energy Data</title>
+<link rel="stylesheet" href="Styles/styles.css">
+<style>
+  /* Additional styles */
+  .header-image {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    background-image: url('images/header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #dee2bc; /* Placeholder color if image fails to load */
+  }
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px; /* Padding for the text container */
+    background-color: rgba(0, 0, 0, 0.7); /* Background color with opacity */
+    color: white; /* Text color */
+  }
+  .container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .container p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: #00ff73;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .btn:hover {
+    background-color: #00ff73;
+  }
+  
+  /* Recommended Data section styles */
+  .recommended-data {
+    text-align: center;
+    background-color: #9eb779;
+    padding: 20px;
+  }
+  .recommended-data h2 {
+    margin-bottom: 10px;
+  }
+  .recommended-data a {
+    display: block;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+  <!-- Header Image with Overlay Text and Buttons -->
+  <div class="header-image">
+    <div class="container">
+      <h1>Welcome to Clean and Affordable Energy Data</h1>
+      <p>Explore and read about various datasets</p>
+      <!-- Search datasets button -->
+      <a href="search.html" class="btn">Search Datasets</a>
+      <!-- Links to other pages -->
+      <a href="view_all_data.html" class="btn">View All Data</a>
+      <a href="analysis.html" class="btn">Analysis</a>
+    </div>
+  </div>
+  
+  <!-- Recommended Data section -->
+  <div class="recommended-data">
+    <h2>Recommended Data:</h2>
+    <a href="EnergyGDP.html">Renewable Energy Share and GDP per Capita Dataset</a>
+  </div>
+</body>
+</html>
